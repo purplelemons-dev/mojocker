@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+  mojocker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mojocker
+    ipc: host
+    restart: unless-stopped
+    volumes:
+      - mojocker:/opt/mojocker
+    tty: true
+    init: true
+
+volumes:
+  mojocker: {}
