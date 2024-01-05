@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: mojocker
+    image: purplelemons/mojocker
     ipc: host
     restart: unless-stopped
     volumes:
